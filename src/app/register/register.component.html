@@ -1,0 +1,33 @@
+
+<form (ngSubmit)="Insert()">
+    <legend>ADD RECORD</legend>
+
+    You will get your ID automatically, please fill the following data ...
+
+    <div class="form-group">
+        <label for="Country">Country</label>
+        <input type="text" class="form-control" name="Country" id="Country" placeholder="Country" [(ngModel)]="record.Country">
+    </div>  
+    
+    <div class="form-group">
+        <label for="Year">Year</label>
+        <input type="text" class="form-control" name="Year" id="Year" placeholder="Year" [(ngModel)]="record.Year">
+    </div>  
+
+    <div class="form-group">
+        <label for="NoofTeam">No of Team</label>
+        <input type="text" class="form-control" name="NoofTeam" id="NoofTeam" placeholder="NoofTeam" [(ngModel)]="record.NoofTeam">
+    </div>  
+
+    <div class="form-group">
+        <label for="Venue">Venue</label>
+        <input type="text" class="form-control" name="Venue" id="Venue" placeholder="Venue" [(ngModel)]="record.Venue">
+    </div>  
+
+    
+
+    <button type="submit" class="btn btn-success" >Add</button>
+
+    <button type="button" class="btn btn-danger" (click)="callMeToCancel()">Cancel/Back</button>
+    
+</form>

@@ -1,0 +1,25 @@
+<div class="table-responsive">
+    
+    <button type="button" class="btn btn-success" (click)="toInsert()">Add RECORD</button>
+    <hr><hr>
+    <table class="table">
+        <thead>
+            <td><b>ID</b></td>
+            <td><b>COUNTRY</b></td>
+            <td><b>YEAR</b></td>
+            <td><b>NO OF TEAMS</b></td>
+            <td><b>VENUE</b></td>
+        </thead>
+        
+        <tr *ngFor="let record of records">
+            <td>{{record.id}}</td>
+            <td>{{record.Country}}</td>
+            <td>{{record.Year}}</td>
+            <td>{{record.NoofTeam}}</td>
+            <td>{{record.Venue}}</td>
+            <td>
+                <a routerLink="/delete/{{record.Venue}}">Delete Record</a>
+            </td>
+        </tr>
+    </table>
+</div>
